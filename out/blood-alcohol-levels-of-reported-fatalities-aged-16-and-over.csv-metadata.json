@@ -1,0 +1,1100 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dataset",
+    "tables": [
+        {
+            "url": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv",
+            "tableSchema": {
+                "columns": [
+                    {
+                        "titles": "Countries",
+                        "name": "countries",
+                        "suppressOutput": true
+                    },
+                    {
+                        "titles": "Ons_code",
+                        "name": "ons_code",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}",
+                        "required": true
+                    },
+                    {
+                        "titles": "Coll_yr",
+                        "name": "coll_yr",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+coll_yr}",
+                        "required": true
+                    },
+                    {
+                        "titles": "Rd_usr_type",
+                        "name": "rd_usr_type",
+                        "suppressOutput": true
+                    },
+                    {
+                        "titles": "10_mcg",
+                        "name": "10_mcg",
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#measure/percentage-of-total",
+                        "datatype": "decimal",
+                        "required": true
+                    },
+                    {
+                        "titles": "49_mcg",
+                        "name": "49_mcg",
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#measure/percentage-of-total",
+                        "datatype": "decimal",
+                        "required": true
+                    },
+                    {
+                        "titles": "79_mcg",
+                        "name": "79_mcg",
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#measure/percentage-of-total",
+                        "datatype": "decimal",
+                        "required": true
+                    },
+                    {
+                        "titles": "99_mcg",
+                        "name": "99_mcg",
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#measure/percentage-of-total",
+                        "datatype": "decimal",
+                        "required": true
+                    },
+                    {
+                        "titles": "149_mcg",
+                        "name": "149_mcg",
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#measure/percentage-of-total",
+                        "datatype": "decimal",
+                        "required": true
+                    },
+                    {
+                        "titles": "199_mcg",
+                        "name": "199_mcg",
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#measure/percentage-of-total",
+                        "datatype": "decimal",
+                        "required": true
+                    },
+                    {
+                        "titles": "200_mcg",
+                        "name": "200_mcg",
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#measure/percentage-of-total",
+                        "datatype": "decimal",
+                        "required": true
+                    },
+                    {
+                        "titles": "Samp_knwn",
+                        "name": "samp_knwn",
+                        "suppressOutput": true
+                    },
+                    {
+                        "titles": "10pm_over",
+                        "name": "10pm_over",
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#measure/percentage-of-total",
+                        "datatype": "decimal",
+                        "required": true
+                    },
+                    {
+                        "titles": "4am_over",
+                        "name": "4am_over",
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#measure/percentage-of-total",
+                        "datatype": "decimal",
+                        "required": true
+                    },
+                    {
+                        "name": "virt_slice",
+                        "virtual": true,
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Slice"
+                    },
+                    {
+                        "name": "virt_slice_structure",
+                        "virtual": true,
+                        "propertyUrl": "qb:sliceStructure",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#slice/cross-measures"
+                    },
+                    {
+                        "name": "virt_obs_10_mcg",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total"
+                    },
+                    {
+                        "name": "virt_obs_10_mcg_meas",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#measure/percentage-of-total"
+                    },
+                    {
+                        "name": "virt_obs_10_mcg_unit",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#unit/percentage"
+                    },
+                    {
+                        "name": "virt_dim_10_mcg_ons_code",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}"
+                    },
+                    {
+                        "name": "virt_dim_10_mcg_coll_yr",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+coll_yr}"
+                    },
+                    {
+                        "name": "virt_obs_10_mcg_type",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_10_mcg",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_49_mcg",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total"
+                    },
+                    {
+                        "name": "virt_obs_49_mcg_meas",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#measure/percentage-of-total"
+                    },
+                    {
+                        "name": "virt_obs_49_mcg_unit",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#unit/percentage"
+                    },
+                    {
+                        "name": "virt_dim_49_mcg_ons_code",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}"
+                    },
+                    {
+                        "name": "virt_dim_49_mcg_coll_yr",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+coll_yr}"
+                    },
+                    {
+                        "name": "virt_obs_49_mcg_type",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_49_mcg",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_79_mcg",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total"
+                    },
+                    {
+                        "name": "virt_obs_79_mcg_meas",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#measure/percentage-of-total"
+                    },
+                    {
+                        "name": "virt_obs_79_mcg_unit",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#unit/percentage"
+                    },
+                    {
+                        "name": "virt_dim_79_mcg_ons_code",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}"
+                    },
+                    {
+                        "name": "virt_dim_79_mcg_coll_yr",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+coll_yr}"
+                    },
+                    {
+                        "name": "virt_obs_79_mcg_type",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_79_mcg",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_99_mcg",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total"
+                    },
+                    {
+                        "name": "virt_obs_99_mcg_meas",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#measure/percentage-of-total"
+                    },
+                    {
+                        "name": "virt_obs_99_mcg_unit",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#unit/percentage"
+                    },
+                    {
+                        "name": "virt_dim_99_mcg_ons_code",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}"
+                    },
+                    {
+                        "name": "virt_dim_99_mcg_coll_yr",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+coll_yr}"
+                    },
+                    {
+                        "name": "virt_obs_99_mcg_type",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_99_mcg",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_149_mcg",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total"
+                    },
+                    {
+                        "name": "virt_obs_149_mcg_meas",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#measure/percentage-of-total"
+                    },
+                    {
+                        "name": "virt_obs_149_mcg_unit",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#unit/percentage"
+                    },
+                    {
+                        "name": "virt_dim_149_mcg_ons_code",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}"
+                    },
+                    {
+                        "name": "virt_dim_149_mcg_coll_yr",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+coll_yr}"
+                    },
+                    {
+                        "name": "virt_obs_149_mcg_type",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_149_mcg",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_199_mcg",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total"
+                    },
+                    {
+                        "name": "virt_obs_199_mcg_meas",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#measure/percentage-of-total"
+                    },
+                    {
+                        "name": "virt_obs_199_mcg_unit",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#unit/percentage"
+                    },
+                    {
+                        "name": "virt_dim_199_mcg_ons_code",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}"
+                    },
+                    {
+                        "name": "virt_dim_199_mcg_coll_yr",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+coll_yr}"
+                    },
+                    {
+                        "name": "virt_obs_199_mcg_type",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_199_mcg",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_200_mcg",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total"
+                    },
+                    {
+                        "name": "virt_obs_200_mcg_meas",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#measure/percentage-of-total"
+                    },
+                    {
+                        "name": "virt_obs_200_mcg_unit",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#unit/percentage"
+                    },
+                    {
+                        "name": "virt_dim_200_mcg_ons_code",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}"
+                    },
+                    {
+                        "name": "virt_dim_200_mcg_coll_yr",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+coll_yr}"
+                    },
+                    {
+                        "name": "virt_obs_200_mcg_type",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_200_mcg",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_10pm_over",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total"
+                    },
+                    {
+                        "name": "virt_obs_10pm_over_meas",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#measure/percentage-of-total"
+                    },
+                    {
+                        "name": "virt_obs_10pm_over_unit",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#unit/percentage"
+                    },
+                    {
+                        "name": "virt_dim_10pm_over_ons_code",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}"
+                    },
+                    {
+                        "name": "virt_dim_10pm_over_coll_yr",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+coll_yr}"
+                    },
+                    {
+                        "name": "virt_obs_10pm_over_type",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_10pm_over",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_4am_over",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total"
+                    },
+                    {
+                        "name": "virt_obs_4am_over_meas",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#measure/percentage-of-total"
+                    },
+                    {
+                        "name": "virt_obs_4am_over_unit",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#unit/percentage"
+                    },
+                    {
+                        "name": "virt_dim_4am_over_ons_code",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}"
+                    },
+                    {
+                        "name": "virt_dim_4am_over_coll_yr",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+coll_yr}"
+                    },
+                    {
+                        "name": "virt_obs_4am_over_type",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_4am_over",
+                        "virtual": true,
+                        "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#obs/{ons_code},{coll_yr}@percentage-of-total",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dataset"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "coll_yr",
+                        "reference": {
+                            "resource": "government-year.csv",
+                            "columnReference": "uri_identifier"
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "ons_code",
+                    "coll_yr"
+                ],
+                "aboutUrl": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#slice/{ons_code},{coll_yr}"
+            }
+        },
+        {
+            "url": "government-year.csv",
+            "tableSchema": "government-year.table.json",
+            "suppressOutput": true
+        }
+    ],
+    "rdfs:seeAlso": [
+        {
+            "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#component/measure-type",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 16
+                },
+                {
+                    "@value": 6
+                },
+                {
+                    "@value": 10
+                },
+                {
+                    "@value": 18
+                },
+                {
+                    "@value": 20
+                },
+                {
+                    "@value": 14
+                },
+                {
+                    "@value": 8
+                },
+                {
+                    "@value": 12
+                },
+                {
+                    "@value": 3
+                }
+            ]
+        },
+        {
+            "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dataset",
+            "@type": [
+                "http://purl.org/linked-data/cube#DataSet",
+                "http://www.w3.org/ns/dcat#Resource",
+                "http://purl.org/linked-data/cube#Attachable",
+                "http://www.w3.org/ns/dcat#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/dc/terms/creator": [
+                {
+                    "@id": "https://www.gov.uk/government/organisations/department-for-transport"
+                }
+            ],
+            "http://purl.org/dc/terms/description": [
+                {
+                    "@type": "https://www.w3.org/ns/iana/media-types/text/markdown#Resource",
+                    "@value": "Reported road casualties in Great Britain in collisions involving illegal alcohol levels ('drink drive statistics')"
+                }
+            ],
+            "http://purl.org/dc/terms/identifier": [
+                {
+                    "@value": "Blood alcohol levels of reported fatalities aged 16 and over"
+                }
+            ],
+            "http://purl.org/dc/terms/issued": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-09-15T16:24:13.375511"
+                }
+            ],
+            "http://purl.org/dc/terms/license": [
+                {
+                    "@id": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                }
+            ],
+            "http://purl.org/dc/terms/modified": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-09-15T16:24:13.375511"
+                }
+            ],
+            "http://purl.org/dc/terms/publisher": [
+                {
+                    "@id": "https://www.gov.uk/government/organisations/department-for-transport"
+                }
+            ],
+            "http://purl.org/dc/terms/title": [
+                {
+                    "@language": "en",
+                    "@value": "Blood alcohol levels of reported fatalities aged 16 and over"
+                }
+            ],
+            "http://purl.org/linked-data/cube#structure": [
+                {
+                    "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#structure"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Blood alcohol levels of reported fatalities aged 16 and over"
+                }
+            ],
+            "http://www.w3.org/ns/dcat#keyword": [
+                {
+                    "@language": "en",
+                    "@value": "Blood"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Fatalities"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Collisions"
+                },
+                {
+                    "@language": "en",
+                    "@value": "DUI"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Alcohol"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Breath"
+                }
+            ],
+            "http://www.w3.org/ns/prov#wasGeneratedBy": [
+                {
+                    "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#csvcubed-build-activity"
+                }
+            ]
+        },
+        {
+            "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#structure",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#DataStructureDefinition",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#component": [
+                {
+                    "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#component/percentage-of-total"
+                },
+                {
+                    "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#component/measure-type"
+                },
+                {
+                    "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#component/unit"
+                },
+                {
+                    "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#component/statistical-geography"
+                },
+                {
+                    "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#component/government-year"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                },
+                {
+                    "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#measure/percentage-of-total"
+                },
+                {
+                    "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/government-year"
+                },
+                {
+                    "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/statistical-geography"
+                }
+            ],
+            "http://purl.org/linked-data/cube#sliceKey": [
+                {
+                    "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#slice/cross-measures"
+                }
+            ]
+        },
+        {
+            "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#measure/percentage-of-total",
+            "@type": [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#MeasureProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "100 to 149 mcg (percentage)"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Percentage over the limit 10pm to 3:59 am"
+                },
+                {
+                    "@language": "en",
+                    "@value": "50 to 79 mcg (percentage)"
+                },
+                {
+                    "@language": "en",
+                    "@value": "150 to 199 mcg (percentage)"
+                },
+                {
+                    "@language": "en",
+                    "@value": "10 to 49 mcg (percentage)"
+                },
+                {
+                    "@language": "en",
+                    "@value": "200 or more mcg (percentage)"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Percentage over the limit 4am to 9:59 pm"
+                },
+                {
+                    "@language": "en",
+                    "@value": "80 to 99 mcg (percentage)"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Percentage of total"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#portion"
+                }
+            ]
+        },
+        {
+            "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#component/statistical-geography",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/statistical-geography"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/statistical-geography"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 1
+                }
+            ]
+        },
+        {
+            "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#class/statistical-geography",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Class",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ]
+        },
+        {
+            "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#component/percentage-of-total",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#measure/percentage-of-total"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#measure/percentage-of-total"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 13
+                },
+                {
+                    "@value": 9
+                },
+                {
+                    "@value": 21
+                },
+                {
+                    "@value": 5
+                },
+                {
+                    "@value": 11
+                },
+                {
+                    "@value": 15
+                },
+                {
+                    "@value": 7
+                },
+                {
+                    "@value": 19
+                },
+                {
+                    "@value": 17
+                }
+            ]
+        },
+        {
+            "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#component/unit",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#attribute": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentRequired": [
+                {
+                    "@value": true
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 4
+                }
+            ]
+        },
+        {
+            "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#component/government-year",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/government-year"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/government-year"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 2
+                }
+            ]
+        },
+        {
+            "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#csvcubed-build-activity",
+            "@type": [
+                "http://www.w3.org/ns/prov#Activity",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/ns/prov#used": [
+                {
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.4.4"
+                }
+            ]
+        },
+        {
+            "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/government-year",
+            "@type": [
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "government-year.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Government Year"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#class/government-year"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"
+                }
+            ]
+        },
+        {
+            "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#slice/cross-measures",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#SliceKey",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/government-year"
+                },
+                {
+                    "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/statistical-geography"
+                }
+            ]
+        },
+        {
+            "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dimension/statistical-geography",
+            "@type": [
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Statistical Geography"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#class/statistical-geography"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refArea"
+                }
+            ]
+        },
+        {
+            "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#class/government-year",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Class",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ]
+        },
+        {
+            "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#dependency/government-year",
+            "@type": [
+                "http://rdfs.org/ns/void#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://rdfs.org/ns/void#dataDump": [
+                {
+                    "@id": "./government-year.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "government-year.csv#"
+                }
+            ]
+        },
+        {
+            "@id": "blood-alcohol-levels-of-reported-fatalities-aged-16-and-over.csv#unit/percentage",
+            "@type": [
+                "http://qudt.org/schema/qudt/Unit",
+                "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://qudt.org/schema/qudt/isScalingOf": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/PERCENT"
+                }
+            ],
+            "http://www.ontology-of-units-of-measure.org/resource/om-2/hasFactor": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#float",
+                    "@value": "1.0"
+                }
+            ],
+            "http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/PERCENT"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/PERCENT"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "percentage"
+                }
+            ]
+        }
+    ]
+}

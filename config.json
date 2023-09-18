@@ -1,0 +1,17 @@
+{
+    "$schema": "https://purl.org/csv-cubed/qube-config/v1",
+    "title": "Blood alcohol levels of reported fatalities aged 16 and over",
+    "description": "Reported road casualties in Great Britain in collisions involving illegal alcohol levels ('drink drive statistics')",
+    "creator": "https://www.gov.uk/government/organisations/department-for-transport",
+    "publisher": "https://www.gov.uk/government/organisations/department-for-transport",
+    "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "keywords": [
+        "DUI",
+        "Alcohol",
+        "Blood",
+        "Breath",
+        "Collisions",
+        "Fatalities"
+    ],
+    "columns": {}
+}

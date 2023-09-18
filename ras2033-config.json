@@ -1,0 +1,143 @@
+{
+    "$schema": "https://purl.org/csv-cubed/qube-config/v1",
+    "title": "Blood alcohol levels of reported fatalities aged 16 and over",
+    "description": "Reported road casualties in Great Britain in collisions involving illegal alcohol levels ('drink drive statistics')",
+    "creator": "https://www.gov.uk/government/organisations/department-for-transport",
+    "publisher": "https://www.gov.uk/government/organisations/department-for-transport",
+    "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "keywords": [
+        "DUI",
+        "Alcohol",
+        "Blood",
+        "Breath",
+        "Collisions",
+        "Fatalities" 
+    ],
+    "columns": {
+        "Countries": false,
+        "Ons_code": {
+            "from_template": "statistical-geography"
+        },
+        "Coll_yr": {
+            "from_template": "government-year"
+        },
+        "Rd_usr_type": false,
+        "10_mcg": {
+            "type": "observations",
+            "measure": {
+                "label": "Percentage of total",
+                "from_existing": "https://purl.org/csv-cubed/resources/measures#portion"
+            },
+            "data_type": "decimal",
+            "unit": {
+                "label": "percentage",
+                "from_existing": "http://qudt.org/vocab/unit/PERCENT"
+            }
+        },
+        "49_mcg": {
+            "type": "observations",
+            "measure": {
+                "label": "Percentage of total",
+                "description": "10 to 49 mcg (percentage)",
+                "from_existing": "https://purl.org/csv-cubed/resources/measures#portion"
+            },
+            "data_type": "decimal",
+            "unit": {
+                "label": "percentage",
+                "from_existing": "http://qudt.org/vocab/unit/PERCENT"
+            }
+        },
+        "79_mcg": {
+            "type": "observations",
+            "measure": {
+                "label": "Percentage of total",
+                "description": "50 to 79 mcg (percentage)",
+                "from_existing": "https://purl.org/csv-cubed/resources/measures#portion"
+            },
+            "data_type": "decimal",
+            "unit": {
+                "label": "percentage",
+                "from_existing": "http://qudt.org/vocab/unit/PERCENT"
+            }
+        },
+        "99_mcg": {
+            "type": "observations",
+            "measure": {
+                "label": "Percentage of total",
+                "description": "80 to 99 mcg (percentage)",
+                "from_existing": "https://purl.org/csv-cubed/resources/measures#portion"
+            },
+            "data_type": "decimal",
+            "unit": {
+                "label": "percentage",
+                "from_existing": "http://qudt.org/vocab/unit/PERCENT"
+            }
+        },
+        "149_mcg": {
+            "type": "observations",
+            "measure": {
+                "label": "Percentage of total",
+                "description": "100 to 149 mcg (percentage)",
+                "from_existing": "https://purl.org/csv-cubed/resources/measures#portion"
+            },
+            "data_type": "decimal",
+            "unit": {
+                "label": "percentage",
+                "from_existing": "http://qudt.org/vocab/unit/PERCENT"
+            }
+        },
+        "199_mcg": {
+            "type": "observations",
+            "measure": {
+                "label": "Percentage of total",
+                "description": "150 to 199 mcg (percentage)",
+                "from_existing": "https://purl.org/csv-cubed/resources/measures#portion"
+            },
+            "data_type": "decimal",
+            "unit": {
+                "label": "percentage",
+                "from_existing": "http://qudt.org/vocab/unit/PERCENT"
+            }
+        },
+        "200_mcg": {
+            "type": "observations",
+            "measure": {
+                "label": "Percentage of total",
+                "description": "200 or more mcg (percentage)",
+                "from_existing": "https://purl.org/csv-cubed/resources/measures#portion"
+            },
+            "data_type": "decimal",
+            "unit": {
+                "label": "percentage",
+                "from_existing": "http://qudt.org/vocab/unit/PERCENT"
+            }
+        },
+        "Samp_knwn": false,
+        "10pm_over": {
+            "type": "observations",
+            "measure": {
+                "label": "Percentage of total",
+                "description": "Percentage over the limit 10pm to 3:59 am",
+                "from_existing": "https://purl.org/csv-cubed/resources/measures#portion"
+            },
+            "data_type": "decimal",
+            "unit": {
+                "label": "percentage",
+                "from_existing": "http://qudt.org/vocab/unit/PERCENT"
+            }
+        },
+        "4am_over": {
+            "type": "observations",
+            "measure": {
+                "label": "Percentage of total",
+                "description": "Percentage over the limit 4am to 9:59 pm",
+                "from_existing": "https://purl.org/csv-cubed/resources/measures#portion"
+            },
+            "data_type": "decimal",
+            "unit": {
+                "label": "percentage",
+                "from_existing": "http://qudt.org/vocab/unit/PERCENT"
+            }
+        }
+    }
+}
